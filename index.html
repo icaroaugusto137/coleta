@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coleta de Lixo Eletrônico</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+    }
+    form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 1.5rem;
+      background-color: #27ae60;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Plataforma de Coleta de Lixo Eletrônico</h1>
+  </header>
+
+  <main>
+    <form id="coletaForm">
+      <h2>Agende sua Doação</h2>
+
+      <label for="nome">Nome do Doador:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="endereco">Endereço para Coleta:</label>
+      <input type="text" id="endereco" name="endereco" required />
+
+      <label for="dispositivo">Tipo de Dispositivo:</label>
+      <select id="dispositivo" name="dispositivo" required>
+        <option value="">Selecione</option>
+        <option value="Celular">Celular</option>
+        <option value="Notebook">Notebook</option>
+        <option value="Monitor">Monitor</option>
+        <option value="Outro">Outro</option>
+      </select>
+
+      <label for="observacoes">Observações:</label>
+      <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+
+      <label for="data">Data para Coleta:</label>
+      <input type="date" id="data" name="data" required />
+
+      <label for="hora">Hora para Coleta:</label>
+      <input type="time" id="hora" name="hora" required />
+
+      <button type="submit">Agendar Coleta</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Plataforma de Coleta Sustentável</p>
+  </footer>
+
+  <script>
+    document.getElementById('coletaForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Coleta agendada com sucesso! (Simulação)');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
